@@ -130,7 +130,6 @@ class PayPalInterface(object):
 
         if not response.success:
             logger.error('A PayPal API error was encountered.')
-            logger.error('PayPal NVP Query Key/Vals:\n%s' % pformat(url_values))
             logger.error('PayPal NVP Query Response')
             logger.error(response)
             raise PayPalAPIResponseError(response)
